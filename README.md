@@ -1,5 +1,7 @@
 # node-vagrant
 
+![zelda-nyan](http://i1.kym-cdn.com/photos/images/original/000/402/521/a01.png "something something")
+
 It's dangerous to go alone! Here's a reliable Vagrant setup to help you on your Node adventure.
 
 This uses an Ubuntu 14.04 LTS 64-bit box with sugar, spice and everything that's nice.
@@ -31,6 +33,7 @@ The `scripts` folder contains all the required material, during the provisioning
   2. `install_*` - installs tools such as mongoDB
   3. Installs npm packages such as nodemon, bower and ember-cli.
 
+
 ### Misc
 
 Ports `1337, 3000, 4200 and 5000` are forwarded to the host, so when you type [http://localhost:3000](http://localhost:3000) on your browser, it points to your VM.
@@ -44,15 +47,18 @@ As such, `install_nvm.sh` gets called as the last provisioning step by the non-r
     $ vagrant up
     $ vagrant ssh
 
+
 #### Reloading changes
 
     vagrant reload  # restarts the VM, skipping the initial import step.
     vagrant reload --provision  # the flag instructs Vagrant to run the provisioners
 
+
 #### Suspending/halting the machine
 
     vagrant suspend # save the current running state of the machine and stop it (dumps RAM contents to disk)
     vargant halt    # gracefully shut down the guest OS and power down the guest machine
+
 
 #### Nuking your box
 
