@@ -8,7 +8,7 @@ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key a
 apt-get update
 apt-get upgrade -y
 
-apt-get install -y postgresql-9.4 postgresql-contrib-9.4 pgadmin3
+apt-get install -y postgresql-9.4 postgresql-contrib-9.4 
 
 su -c 'createuser -s vagrant' postgres
 sed -ibk \
