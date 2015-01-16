@@ -24,7 +24,15 @@ Vagrant.configure(2) do |config|
 
   # Forward all ports in 'dev_ports' to the host machine
   # 'auto_correct' is used to resolve any possible conflicts.
-  dev_ports = [3000, 4200, 5000, 1337]
+  dev_ports = [
+    # Node
+    3000,
+    4200,
+    5000,
+    1337,
+    # PosgreSQL
+    5432
+  ]
   dev_ports.each do |p|
     config.vm.network 'forwarded_port', guest: p, host: p, auto_correct: true
   end

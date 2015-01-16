@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Installs the Node Version Manager (https://github.com/creationix/nvm)
 
-sudo su vagrant -c "wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.22.1/install.sh | bash"
+su vagrant -c "wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.22.1/install.sh | bash"
 
 # Load nvm for the current script
 export NVM_DIR="/home/vagrant/.nvm"

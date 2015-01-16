@@ -12,7 +12,11 @@ echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | 
 apt-get update
 
 # Install release described in MONGO_VERSION of MongoDB
-apt-get install -y mongodb-org=$MONGO_VERSION mongodb-org-server=$MONGO_VERSION mongodb-org-shell=$MONGO_VERSION mongodb-org-mongos=$MONGO_VERSION mongodb-org-tools=$MONGO_VERSION
+apt-get install -y mongodb-org=$MONGO_VERSION \
+  mongodb-org-server=$MONGO_VERSION \
+  mongodb-org-shell=$MONGO_VERSION \
+  mongodb-org-mongos=$MONGO_VERSION \
+  mongodb-org-tools=$MONGO_VERSION
 
 # Pin the installed packages to prevent apt-get from upgrading them
 echo "mongodb-org hold" | dpkg --set-selections

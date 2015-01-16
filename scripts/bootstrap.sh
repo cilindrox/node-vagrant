@@ -16,7 +16,10 @@ echo "127.0.0.1 $BOX_NAME" >> /etc/hosts
 hostname $BOX_NAME
 
 # Install core components
-/vagrant/scripts/pre_install.sh
+/vagrant/scripts/install_build_tools.sh
+
+# Install PostgreSQL
+/vagrant/scripts/install_postgres.sh
 
 # Install MongoDB
 /vagrant/scripts/install_mongodb.sh
@@ -24,6 +27,7 @@ hostname $BOX_NAME
 # Install node
 /vagrant/scripts/install_nvm.sh
 
+# Done
 touch /etc/vagrant-provisioned
 
 echo "--------------------------------------------------"

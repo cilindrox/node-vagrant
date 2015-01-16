@@ -29,8 +29,8 @@ Installing a Vagrant box (only required if the host lacks the image). Nothing fa
 
 The `scripts` folder contains all the required material, during the provisioning process, `bootstrap.sh` will be called, which in turn will execute the following:
 
-  1. `pre_install.sh` - updates and installs common required deps, such as `git` and `build-essential`.
-  2. `install_*` - installs tools such as mongoDB
+  1. `install_build_tools.sh` - updates and installs common required deps, such as `git`, `vim` and `build-essential`.
+  2. `install_*` - installs tools such as mongoDB and PostgreSQL
   3. Installs npm packages such as nodemon, bower and ember-cli.
 
 
