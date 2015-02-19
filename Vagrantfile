@@ -30,8 +30,10 @@ Vagrant.configure(2) do |config|
     4200,
     5000,
     1337,
+    # mongoDB
+    27017
     # PosgreSQL
-    5432
+    # 5432
   ]
   dev_ports.each do |p|
     config.vm.network 'forwarded_port', guest: p, host: p, auto_correct: true

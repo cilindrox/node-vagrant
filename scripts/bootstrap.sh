@@ -18,9 +18,6 @@ hostname $BOX_NAME
 # Install core components
 /vagrant/scripts/install_build_tools.sh
 
-# Install PostgreSQL
-/vagrant/scripts/install_postgres.sh
-
 # Install MongoDB
 /vagrant/scripts/install_mongodb.sh
 
