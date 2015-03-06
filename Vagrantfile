@@ -31,7 +31,9 @@ Vagrant.configure(2) do |config|
     5000,
     1337,
     # mongoDB
-    27017
+    27017,
+    # redis
+    6379
     # PosgreSQL
     # 5432
   ]
