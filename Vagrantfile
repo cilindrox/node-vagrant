@@ -10,7 +10,7 @@ Vagrant.configure(2) do |config|
   # For a complete reference, please see the online documentation at
   # https://docs.vagrantup.com.
 
-  config.vm.box = 'ubuntu/trusty64'
+  config.vm.box = 'trusty64'
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -33,7 +33,7 @@ Vagrant.configure(2) do |config|
     # mongoDB
     27017,
     # redis
-    6379
+    6379,
     # PosgreSQL
     # 5432
   ]
@@ -54,7 +54,8 @@ Vagrant.configure(2) do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  config.vm.synced_folder ENV['PROJECT_DIR'], '/projects'
+  
+  config.vm.synced_folder (ENV['PROJECT_DIR'] || ENV['PROJECT_DIR'] = '../projects'), '/projects'
 
   # Removes "stdin: is not a tty" annoyance as per
   # https://github.com/SocialGeeks/vagrant-openstack/commit/d3ea0695e64ea2e905a67c1b7e12d794a1a29b97
