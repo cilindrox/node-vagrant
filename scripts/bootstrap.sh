@@ -21,6 +21,12 @@ hostname $BOX_NAME
 # Install MongoDB
 /vagrant/scripts/install_mongodb.sh
 
+# Install Redis
+/vagrant/scripts/install_redis.sh
+
+# Install RabbitMQ
+/vagrant/scripts/install_rabbit.sh
+
 # Install node
 /vagrant/scripts/install_nvm.sh
 

@@ -25,17 +25,20 @@ Vagrant.configure(2) do |config|
   # Forward all ports in 'dev_ports' to the host machine
   # 'auto_correct' is used to resolve any possible conflicts.
   dev_ports = [
-    # Node
+    # Node JS
     3000,
     4200,
     5000,
     1337,
-    # mongoDB
+    # Mongo DB
     27017,
-    # redis
+    # Redis
     6379,
-    # PosgreSQL
-    # 5432
+    # Rabbit MQ
+    5672,
+    15672,
+    4369,
+    25672
   ]
   dev_ports.each do |p|
     config.vm.network 'forwarded_port', guest: p, host: p, auto_correct: true

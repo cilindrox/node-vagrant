@@ -12,4 +12,4 @@ nvm install $NODE_VERSION
 nvm alias default $NODE_VERSION
 
 # Install global packages
-npm install -g bower ember-cli nodemon
+# npm install -g bower ember-cli nodemon
