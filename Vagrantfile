@@ -25,17 +25,20 @@ Vagrant.configure(2) do |config|
   # Forward all ports in 'dev_ports' to the host machine
   # 'auto_correct' is used to resolve any possible conflicts.
   dev_ports = [
-    # Node
+    # Node JS
     3000,
     4200,
     5000,
     1337,
-    # mongoDB
+    # Mongo DB
     27017,
-    # redis
-    6379
-    # PosgreSQL
-    # 5432
+    # Redis
+    6379,
+    # Rabbit MQ
+    5672,
+    15672,
+    4369,
+    25672
   ]
   dev_ports.each do |p|
     config.vm.network 'forwarded_port', guest: p, host: p, auto_correct: true
@@ -54,7 +57,8 @@ Vagrant.configure(2) do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  config.vm.synced_folder '../projects', '/projects'
+  
+  config.vm.synced_folder (ENV['PROJECT_DIR'] || ENV['PROJECT_DIR'] = '../projects'), '/projects'
 
   # Removes "stdin: is not a tty" annoyance as per
   # https://github.com/SocialGeeks/vagrant-openstack/commit/d3ea0695e64ea2e905a67c1b7e12d794a1a29b97

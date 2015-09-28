@@ -5,4 +5,4 @@ apt-get update
 apt-get upgrade -y
 
 # apt-get install -y make g++ libcairo2-dev libav-tools
-apt-get install -y build-essential git curl vim nfs-common portmap
+apt-get install -y build-essential git curl wget vim nfs-common portmap htop ca-certificates
